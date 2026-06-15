@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#fdf6ee">
+<title>Why you</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{font-family:'Inter',sans-serif;background:#fdf6ee;color:#1a1008;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+nav{
+  position:fixed;top:0;width:100%;z-index:9000;
+  display:flex;justify-content:center;flex-wrap:wrap;gap:0.5rem 2rem;
+  padding:0.85rem 2rem;
+  background:rgba(253,246,238,0.97);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(180,100,60,0.12);
+}
+nav a{
+  color:#b07850;font-size:0.7rem;letter-spacing:2px;
+  text-transform:uppercase;text-decoration:none;
+  transition:color 0.3s;white-space:nowrap;
+}
+nav a:hover,nav a.active{color:#c45030;}
+nav a.active{border-bottom:1.5px solid #c45030;padding-bottom:2px;}
+
+/* desktop wrap — wide comfortable reading width */
+.wrap{
+  max-width:760px;
+  margin:0 auto;
+  padding:6rem 2.5rem 5rem;
+}
+
+.tag{font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:#c45030;margin-bottom:0.5rem;}
+.stitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:600;color:#1a0a04;margin-bottom:2rem;line-height:1.15;
+}
+
+.nbtn{
+  display:inline-block;text-align:center;
+  border:1.5px solid rgba(196,80,48,0.3);
+  border-radius:999px;padding:0.65rem 1.8rem;
+  font-size:0.75rem;letter-spacing:1.5px;
+  text-transform:uppercase;color:#c45030;
+  text-decoration:none;
+  transition:background 0.2s,color 0.2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.nbtn:hover,.nbtn:active{background:#c45030;color:#fff;}
+.nav-btns{display:flex;justify-content:space-between;margin-top:2.5rem;gap:1rem;}
+.nav-btns .nbtn{flex:1;text-align:center;}
+
+@media(max-width:600px){
+  .wrap{padding:5.5rem 1.2rem 4rem;}
+  nav{gap:0.5rem 1.2rem;padding:0.75rem 1rem;}
+  nav a{font-size:0.62rem;letter-spacing:1.2px;}
+}
+
+/* 2 column on desktop, 1 on mobile */
+.reasons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+@media(max-width:600px){.reasons{grid-template-columns:1fr;gap:10px;}}
+.reason{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1.3rem 1.4rem;
+  background:#fff;border:1px solid rgba(196,120,70,0.12);
+  border-radius:14px;
+  box-shadow:0 2px 16px rgba(180,80,40,0.07);
+}
+.rnum{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  color:rgba(196,80,48,0.18);line-height:1;
+  min-width:32px;flex-shrink:0;margin-top:2px;
+}
+.rtext{font-size:clamp(0.88rem,1.3vw,0.97rem);line-height:1.72;color:#3a2018;font-weight:300;}
+.infinite{
+  font-size:clamp(0.85rem,1.3vw,0.95rem);
+  color:#a07858;font-style:italic;
+  margin-top:1.8rem;text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  line-height:1.6;
+}
+</style>
+</head>
+<body><nav><a href="index.html">home</a><a href="letter.html">letter</a><a href="memories.html">memories</a><a href="love.html" class="active">why you</a><a href="promises.html">promises</a><a href="videos.html">videos</a></nav><div class="wrap">
+<p class="tag">why you</p>
+<h2 class="stitle">what i love about you</h2>
+<div class="reasons">
+<div class="reason"><div class="rnum">01</div><div class="rtext">i think you are the most beautiful soul i have ever come across. genuinely. there is nobody like you and there never will be.</div></div>
+<div class="reason"><div class="rnum">02</div><div class="rtext">i see the way you love the people around you. you give so much. it makes me proud every single day.</div></div>
+<div class="reason"><div class="rnum">03</div><div class="rtext">i love your laugh. especially the one you can't control. that is honestly my favourite thing in the entire world.</div></div>
+<div class="reason"><div class="rnum">04</div><div class="rtext">i see how you handle this distance with so much patience. you are so much stronger than you think you are.</div></div>
+<div class="reason"><div class="rnum">05</div><div class="rtext">i just want to be your best friend. like actually. i just want to talk to you all day every day and that's never going to change.</div></div>
+<div class="reason"><div class="rnum">06</div><div class="rtext">i'm so glad you chose me. and i don't take that lightly, not even for a second. my Supreme Leader, forever.</div></div>
+</div>
+<p class="infinite">and there are infinite things more i could say about you.</p>
+<div class="nav-btns">
+<a class="nbtn" href="memories.html">back</a>
+<a class="nbtn" href="promises.html">my promises</a>
+</div>
+</div></body>
+</html>
