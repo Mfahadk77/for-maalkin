@@ -85,7 +85,7 @@ nav a.active{border-bottom:1.5px solid #c45030;padding-bottom:2px;}
   aspect-ratio:3/4;object-fit:cover;
   transition:transform 0.5s ease;
 }
-.gi:hover img{transform:scale(1.05);}
+.gi:hover img,.gi.active img{transform:scale(1.05);}
 .gc{
   position:absolute;inset:0;
   display:flex;flex-direction:column;
@@ -93,8 +93,9 @@ nav a.active{border-bottom:1.5px solid #c45030;padding-bottom:2px;}
   background:rgba(26,10,4,0.58);
   opacity:0;transition:opacity 0.32s;
   padding:0.8rem;text-align:center;
+  pointer-events:none;
 }
-.gi:hover .gc,.gi:active .gc{opacity:1;}
+.gi:hover .gc,.gi.active .gc{opacity:1;}
 .nick{
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(1rem,2vw,1.5rem);
@@ -166,5 +167,26 @@ nav a.active{border-bottom:1.5px solid #c45030;padding-bottom:2px;}
 <a class="nbtn" href="letter.html">back</a>
 <a class="nbtn" href="love.html">why you</a>
 </div>
-</div></body>
+</div>
+<script>
+// tap to show nickname on mobile, click works on desktop too
+document.querySelectorAll('.gi').forEach(function(el) {
+  el.addEventListener('click', function(e) {
+    // toggle active on tapped item
+    var isActive = el.classList.contains('active');
+    // close all others
+    document.querySelectorAll('.gi.active').forEach(function(other) {
+      other.classList.remove('active');
+    });
+    if (!isActive) {
+      el.classList.add('active');
+      // auto hide after 2 seconds
+      setTimeout(function() {
+        el.classList.remove('active');
+      }, 2000);
+    }
+  });
+});
+</script>
+</body>
 </html>
